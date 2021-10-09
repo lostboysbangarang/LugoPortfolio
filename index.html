@@ -14,7 +14,7 @@
     })();
     </script>
 </head>
-<body>
+<body class="dark">
     <section class="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
@@ -22,13 +22,13 @@
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
-                    <a class="nav__link--anchor link__hover-effect" href="#">.About()</a>
+                    <span onclick="toggleModal()" class="nav__link--anchor link__hover-effect">.About()</span>
                 </li>
                 <li class="nav__link">
-                    <a class="nav__link--anchor link__hover-effect" href="#">.Projects()</a>
+                    <a class="nav__link--anchor link__hover-effect" href="#projects">.Projects()</a>
                 </li>
                 <li class="nav__link">
-                    <span onclick="toggleModal()" class="nav__link--anchor link__hover-effect" href="#">.Contact()</span>
+                    <span onclick="toggleModal()" class="nav__link--anchor link__hover-effect">.Contact()</span>
                 </li>
                 <li class="nav__link">
                     <i class="far fa-adjust click" onclick="toggleContrast()"></i>
