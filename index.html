@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LugoWebDevelopment</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_TVJp4mNWhM8sBscFJU4nR");
+    })();
+    </script>
+</head>
+<body>
+    <section class="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img class="logo" src="./assets/logo.svg" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a class="nav__link--anchor link__hover-effect" href="#">.About()</a>
+                </li>
+                <li class="nav__link">
+                    <a class="nav__link--anchor link__hover-effect" href="#">.Projects()</a>
+                </li>
+                <li class="nav__link">
+                    <span onclick="toggleModal()" class="nav__link--anchor link__hover-effect" href="#">.Contact()</span>
+                </li>
+                <li class="nav__link">
+                    <i class="far fa-adjust click" onclick="toggleContrast()"></i>
+                </li>                
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="content">
+                <h1 class="title">
+                    Hej
+                </h1>
+                <h1 class="titleSecondary">
+                    I'm Hayden
+                </h1>
+                <p class="headerP">
+                    I'm a <b class="purp">Full-Stack Web Dev</b> with a strong passion for learning new languages and techniques. <br>
+                    Here's a bit more <b onclick="toggleModal()" class="purp click">about me</b>.
+                </p>
+                <div class="socials">
+                    <a href="" target="_blank" class="links click">
+                        <img class="click" src="./assets/github.svg" alt="">
+                    </a>
+                    <a href="" target="_blank" class="links click">
+                        <img class="click" src="./assets/linkedin.svg" alt="">
+                    </a>
+                    <a href="" target="_blank" class="links click">
+                        <img class="click" src="./assets/file-pdf.svg" alt="">
+                    </a>
+                    <a href="" target="_blank" class="links click">
+                        <img class="click" src="./assets/discord.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <button onclick="toggleModal()" class="mailBtn click">
+            <img src="./assets/mail.svg" alt="">
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scrollIcon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modalHalf about">
+                <h3 class="title">
+                    A bit about me:
+                </h3>
+                <h4 class="subtitle">
+                    Full-Stack Web Dev
+                </h4>
+                <p class="para">
+                    I am a 25 year old American <span>Full-Stack Website Developer</span> with a strong passion for
+                    developing websites with great <span>user experiences</span>.
+                    <br>    <br>
+                    I currently take on any <span>coding bootcamps</span> that I can to learn
+                    how to solve extremely difficult, and complex problems to the best of my abilities.
+                    <br>    <br>
+                    I hope this site does it's best to impress you;
+                    <br>
+                    For I am a <span>Wizard</span> and this keyboard <span>My Staff</span>.
+
+                </p>
+                <div class="languages">
+                    <figure>
+                        <img class="HTML" src="./assets/html5.svg" alt="">
+                        <span class="name">
+                            HTML
+                        </span>
+                    </figure>
+                    <figure>
+                        <img class="CSS" src="./assets/css.svg" alt="">
+                        <span class="name">
+                            SCSS/SASS
+                        </span>
+                    </figure>
+                    <figure>
+                        <img class="js" src="./assets/js.svg" alt="">
+                        <span class="name">
+                            JavaScript
+                        </span>
+                    </figure>
+                    <figure>
+                        <img class="Node" src="./assets/node-js.svg" alt="">
+                        <span class="name">
+                            Node.js
+                        </span>
+                    </figure>
+                    <figure>
+                        <img class="vue" src="./assets/vuejs.svg" alt="">
+                        <span class="name">
+                            Vue.js
+                        </span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modalHalf contact">
+                <img class="exit click" onclick="toggleModal()" title="Exit Portal" src="./assets/exit.svg" alt="">
+                <h3 class="title titleContact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="subtitle subContact">
+                    I'm currently open to new opportunities.
+                </h4>
+                <form onsubmit="contact(event)" class="contactForm">
+                    <div class="item">
+                        <label class="label">Name</label>
+                        <input type="text" class="input" name="user_name" required></input>
+                    </div>
+                    <div class="item">
+                        <label class="label">Email</label>
+                        <input type="email" class="input" name="user_email" required></input>
+                    </div>
+                    <div class="item">
+                        <label class="label">Message</label>
+                        <textarea type="text" class="input" name="message" required></textarea>
+                    </div>
+                    <button class="formSubmit button" id="contactSubmit">Send it my way</button>
+                </form>
+                <div class="overlay loading">
+                    <img src="./assets/spinner.svg" alt="">
+                </div>
+                <div class="overlay success">
+                    Thanks for the message!
+                    <br>    <br>
+                    It will be sent to my email via jQuery magic.
+                    <br>    <br>
+                    I look forward to speaking with you soon!
+                </div>
+            </div>
+        </div>
+        <img class="shape shape0" src="./assets/semi circle.svg" alt="">
+        <img src="./assets/circle.svg" alt="" class="shape shape1">
+        <img src="./assets/squiggly.svg" alt="" class="shape shape2">
+        <img src="./assets/circle.svg" alt="" class="shape shape3">
+        <img src="./assets/triangle.svg" alt="" class="shape shape4">
+        <img src="./assets/circle.svg" alt="" class="shape shape5">
+        <img src="./assets/squiggly.svg" alt="" class="shape shape6">
+        <img src="./assets/circle.svg" alt="" class="shape shape7">
+        <img src="./assets/semi circle.svg" alt="" class="shape shape8">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="title">
+                    Here are some of my <span class="purp">projects</span>
+                </h1>
+                <ul class="list">
+                    <li class="project">
+                        <div class="wrapper">
+                            <div id="backgroundI" class="background"></div>
+                            <img id="projectImgI" src="./assets/codeQuiz.webp" alt="">
+                            
+                            <div id="descriptionI" class="description">
+                                <h3 class="title">
+                                    Coding Quiz Challenge
+                                </h3>
+                                <h4 class="subtitle">
+                                    HTML, Sass, jQuery, Local Storage
+                                </h4>
+                                <p class="para">
+                                    This is a simple project I completed for OSU's Coding bootcamp. The objective is to complete the quiz in the shortest amount of time possible, while missing as few questions as you can. Be careful! wrong answers deduct time from your score.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+            
+                <figure>
+                    <img class="logo" src="./assets/logo.svg" alt="">
+                </figure>
+                <div class="socials">
+                    <a href="#" class="links link__hover-effect--dark">
+                        GitHub
+                    </a>
+                    <a href="#" class="links link__hover-effect--dark">
+                        Linkedin
+                    </a>
+                    <a href="#" class="links link__hover-effect--dark">
+                        Contact
+                    </a>
+                    <a href="#" class="links link__hover-effect--dark">
+                        Resume
+                    </a>
+                </div>
+                <div class="copyright">
+                    Copyright © Hayden Lugo 2021
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.js"
+  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+  crossorigin="anonymous"></script>
+<script src="./scripts/main.js"></script>
+

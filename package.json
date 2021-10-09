@@ -1,0 +1,25 @@
+{
+  "name": "lugoportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "sass": "^1.42.1",
+    "serve": "^12.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lostboysbangarang/LugoPortfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lostboysbangarang/LugoPortfolio/issues"
+  },
+  "homepage": "https://github.com/lostboysbangarang/LugoPortfolio#readme"
+}
